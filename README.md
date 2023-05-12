@@ -26,6 +26,12 @@ https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
 - Install Kubernetes CLI (kubectl)
 https://docs.aws.amazon.com/eks/latest/userguide/install-kubectl.html
 
+after installing kubectl, configures kubectl so that you can connect to an Amazon EKS cluster.
+
+```
+aws eks --region us-west-2 update-kubeconfig --name myeksnode
+```
+
 - Instal EKS CLI (eksctl)
 https://docs.aws.amazon.com/emr/latest/EMR-on-EKS-DevelopmentGuide/setting-up-eksctl.html
 
@@ -193,6 +199,8 @@ check on AWS ECR console, the image was successfully pushed to our repo
 ![ecr](./screenshots/06%20image.png)
 
 ### Step 6: create a deployment
+
+
 
 Create a deployment.yml file under project root
 
