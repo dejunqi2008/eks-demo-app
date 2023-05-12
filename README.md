@@ -26,12 +26,6 @@ https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
 - Install Kubernetes CLI (kubectl)
 https://docs.aws.amazon.com/eks/latest/userguide/install-kubectl.html
 
-after installing kubectl, configures kubectl so that you can connect to an Amazon EKS cluster.
-
-```
-aws eks --region us-west-2 update-kubeconfig --name myeksnode
-```
-
 - Instal EKS CLI (eksctl)
 https://docs.aws.amazon.com/emr/latest/EMR-on-EKS-DevelopmentGuide/setting-up-eksctl.html
 
@@ -65,6 +59,12 @@ we have to also edit the inboud rules for the instances inorder for it to be acc
 
 ![inbound_rule_01](./screenshots/10%20inbound%20rules.png)
 ![inbound_rule_02](./screenshots/11%20edit%20inbound%20rules.png)
+
+after creating the cluster, configures kubectl so that you can connect to an Amazon EKS cluster.
+
+```bash
+aws eks --region us-west-2 update-kubeconfig --name myeksnode # myeksnode is the cluster name
+```
 
 ### Step 4: Create Elastic Container Registry
 
